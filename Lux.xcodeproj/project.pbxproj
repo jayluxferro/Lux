@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		690B435B25A9BD9400110EB1 /* MomoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B435A25A9BD9400110EB1 /* MomoView.swift */; };
+		690B435E25A9BDAF00110EB1 /* EnerSmartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B435D25A9BDAF00110EB1 /* EnerSmartView.swift */; };
+		690B437325A9D9E000110EB1 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B437225A9D9E000110EB1 /* Controller.swift */; };
+		690B437B25A9DD2200110EB1 /* Ecg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695350D2252CEA9A002776D1 /* Ecg.framework */; };
+		69126C6D251FB60C00D724F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69126C6C251FB60B00D724F7 /* Assets.xcassets */; };
+		6926619C251FCBBE00C0E9B1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926619B251FCBBE00C0E9B1 /* Config.swift */; };
+		697CD92125D0043E0031A59E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CD92025D0043E0031A59E /* Utils.swift */; };
+		697CD92325D0071B0031A59E /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 697CD92225D0071B0031A59E /* Config.plist */; };
+		69968632251524E500B4011E /* LuxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996861F251524E300B4011E /* LuxApp.swift */; };
+		69B05C6F25A9EB92006C1769 /* LProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B05C6E25A9EB92006C1769 /* LProgress.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		690B435A25A9BD9400110EB1 /* MomoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoView.swift; sourceTree = "<group>"; };
+		690B435D25A9BDAF00110EB1 /* EnerSmartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnerSmartView.swift; sourceTree = "<group>"; };
+		690B437225A9D9E000110EB1 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		69126C6C251FB60B00D724F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6926619B251FCBBE00C0E9B1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		695350D2252CEA9A002776D1 /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ecg.framework; path = ../../../opensource/ecg/Ecg.framework; sourceTree = "<group>"; };
+		697CD92025D0043E0031A59E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		697CD92225D0071B0031A59E /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		6996861F251524E300B4011E /* LuxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxApp.swift; sourceTree = "<group>"; };
+		69968626251524E500B4011E /* Lux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69968629251524E500B4011E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B05C6A25A9E262006C1769 /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Ecg.framework; sourceTree = "<group>"; };
+		69B05C6E25A9EB92006C1769 /* LProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LProgress.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69968623251524E500B4011E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690B437B25A9DD2200110EB1 /* Ecg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6926619A251FCB8F00C0E9B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6926619B251FCBBE00C0E9B1 /* Config.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		69968619251524E300B4011E = {
+			isa = PBXGroup;
+			children = (
+				69B05C6825A9E254006C1769 /* framework */,
+				6926619A251FCB8F00C0E9B1 /* Model */,
+				6996861E251524E300B4011E /* View */,
+				69968628251524E500B4011E /* Shared */,
+				69968627251524E500B4011E /* Products */,
+				E11FCFE03AF37F73ADBCB837 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6996861E251524E300B4011E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6996861F251524E300B4011E /* LuxApp.swift */,
+				690B435A25A9BD9400110EB1 /* MomoView.swift */,
+				690B435D25A9BDAF00110EB1 /* EnerSmartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69968627251524E500B4011E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69968626251524E500B4011E /* Lux.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69968628251524E500B4011E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				69126C6C251FB60B00D724F7 /* Assets.xcassets */,
+				69968629251524E500B4011E /* Info.plist */,
+				690B437225A9D9E000110EB1 /* Controller.swift */,
+				69B05C6E25A9EB92006C1769 /* LProgress.swift */,
+				697CD92025D0043E0031A59E /* Utils.swift */,
+				697CD92225D0071B0031A59E /* Config.plist */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		69B05C6825A9E254006C1769 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				69B05C6A25A9E262006C1769 /* Ecg.framework */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		E11FCFE03AF37F73ADBCB837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				695350D2252CEA9A002776D1 /* Ecg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69968625251524E500B4011E /* Lux (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6996863A251524E500B4011E /* Build configuration list for PBXNativeTarget "Lux (iOS)" */;
+			buildPhases = (
+				69968622251524E500B4011E /* Sources */,
+				69968623251524E500B4011E /* Frameworks */,
+				69968624251524E500B4011E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lux (iOS)";
+			productName = "EnerSmart (iOS)";
+			productReference = 69968626251524E500B4011E /* Lux.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6996861A251524E300B4011E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					69968625251524E500B4011E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 6996861D251524E300B4011E /* Build configuration list for PBXProject "Lux" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69968619251524E300B4011E;
+			productRefGroup = 69968627251524E500B4011E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69968625251524E500B4011E /* Lux (iOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69968624251524E500B4011E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697CD92325D0071B0031A59E /* Config.plist in Resources */,
+				69126C6D251FB60C00D724F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69968622251524E500B4011E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690B437325A9D9E000110EB1 /* Controller.swift in Sources */,
+				69B05C6F25A9EB92006C1769 /* LProgress.swift in Sources */,
+				690B435B25A9BD9400110EB1 /* MomoView.swift in Sources */,
+				697CD92125D0043E0031A59E /* Utils.swift in Sources */,
+				690B435E25A9BDAF00110EB1 /* EnerSmartView.swift in Sources */,
+				69968632251524E500B4011E /* LuxApp.swift in Sources */,
+				6926619C251FCBBE00C0E9B1 /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		69968638251524E500B4011E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69968639251524E500B4011E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6996863B251524E500B4011E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462Z845U24;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/framework",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Shared/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apple.sperixlabs.lux;
+				PRODUCT_NAME = Lux;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6996863C251524E500B4011E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462Z845U24;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/framework",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Shared/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = apple.sperixlabs.lux;
+				PRODUCT_NAME = Lux;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6996861D251524E300B4011E /* Build configuration list for PBXProject "Lux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69968638251524E500B4011E /* Debug */,
+				69968639251524E500B4011E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6996863A251524E500B4011E /* Build configuration list for PBXNativeTarget "Lux (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6996863B251524E500B4011E /* Debug */,
+				6996863C251524E500B4011E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6996861A251524E300B4011E /* Project object */;
+}
