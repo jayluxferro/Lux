@@ -1,23 +1,16 @@
 //
-//  MomoView.swift
+//  JTView.swift
 //  Lux (iOS)
 //
-//  Created by Jay on 09/01/2021.
+//  Created by Jay on 13/04/2021.
 //
 
 import SwiftUI
 
-struct MomoView: View {
-    
+struct JTView: View {
     @StateObject var ctrl = Controller()
-    @State private var networks = Config.networks
-    @State private var selectedNetwork = Config.networks[0]
-    @State private var phoneNumber = ""
-   
-    
-    private var isValid: Bool {
-        return phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines).count >= 10
-    }
+    @State private var port = ""
+    @State private var date = ""
     
     var body: some View {
         NavigationView {
@@ -26,18 +19,21 @@ struct MomoView: View {
                 Form{
                     Section(header: Text("Details")) {
                         HStack {
-                            Text("Phone Number")
+                            Text("Port")
                             Spacer(minLength: 22)
                             Divider()
                             Spacer()
-                            TextField("Phone Number", text: $phoneNumber)
-                                .keyboardType(.numberPad)
+                            TextField("Port", text: $ctrl.port)
+                                .disabled(true)
                         }
                         
-                        Picker("Network", selection: $selectedNetwork) {
-                            ForEach(networks, id: \.self) { network in
-                                Text(network)
-                            }
+                        HStack {
+                            Text("Date")
+                            Spacer(minLength: 18)
+                            Divider()
+                            Spacer()
+                            TextField("Date", text: $ctrl.date)
+                                .disabled(true)
                         }
                     }
                     
@@ -49,7 +45,7 @@ struct MomoView: View {
                                 TextEditor(text: $ctrl.log)
                                     .disabled(true)
                                     .font(.subheadline)
-                                    .frame(height: geo.size.height/3, alignment: .leading)
+                                    .frame(height: geo.size.height/2, alignment: .leading)
                             }
                         }
                     }
@@ -60,26 +56,26 @@ struct MomoView: View {
                 }
             }
             .navigationTitle(
-                Text("MoMo")
+                Text("iConnect")
             )
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button(action: {
                 // end editing
                 ctrl.endEditing()
                 DispatchQueue.main.async{
-                    ctrl.verifyMomo(network: selectedNetwork, phone: phoneNumber)
+                    ctrl.iConnect()
                 }
             }, label: {
                 Image(systemName: "magnifyingglass.circle")
             })
-            .disabled((!isValid) || ctrl.isProcessing)
+            .disabled(ctrl.isProcessing)
             )
         }
     }
 }
 
-struct MomoView_Previews: PreviewProvider {
+struct JTView_Previews: PreviewProvider {
     static var previews: some View {
-        MomoView()
+        JTView()
     }
 }

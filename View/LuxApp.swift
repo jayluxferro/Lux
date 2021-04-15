@@ -23,6 +23,12 @@ struct LuxApp: App {
                     .tabItem {
                         Image(systemName: "doc.text.magnifyingglass")
                     }
+                
+                // JT
+                JTView()
+                    .tabItem {
+                        Image(systemName: "rectangle.connected.to.line.below")
+                    }
             }
         }
     }

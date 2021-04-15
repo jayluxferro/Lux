@@ -80,6 +80,7 @@ struct EnerSmartView: View {
                                 LProgress()
                             }else {
                                 TextEditor(text: $log)
+                                    .disabled(true)
                                     .font(.subheadline)
                                     .frame(height: geo.size.height/3, alignment: .leading)
                             }

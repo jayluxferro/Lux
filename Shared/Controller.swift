@@ -14,6 +14,9 @@ import FoundationNetworking
 class Controller: ObservableObject {
     @Published var log = ""
     @Published var isProcessing = false
+    @Published var port = ""
+    @Published var date = ""
+    let plistConfig = Utils.parseConfig()
     
     func endEditing() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
@@ -25,8 +28,6 @@ class Controller: ObservableObject {
         
         // removing any spaces in phone number
         let phoneNumber = phone.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "+", with: "")
-        
-        let plistConfig = Utils.parseConfig()
         let userId = plistConfig.object(forKey: "userid") as! String
         let phantom = plistConfig.object(forKey: "phantom") as! String
         let validateG = plistConfig.object(forKey: "validateG") as! String
@@ -36,7 +37,7 @@ class Controller: ObservableObject {
         
         let parameters = "{\"userid\":\"\(userId)\",\"phantom\":\"\(phantom)\",\"destinationbank\":\"\(network)\",\"accountnumber\":\"\(phoneNumber)\",\"type\":\"MOMO\",\"requestType\":\"\(validateG)\"}"
         let postData = parameters.data(using: .utf8)
-
+        
         var request = URLRequest(url: URL(string: csapi)!,timeoutInterval: Double.infinity)
         request.addValue(cs, forHTTPHeaderField: "Host")
         request.addValue("close", forHTTPHeaderField: "Connection")
@@ -49,22 +50,54 @@ class Controller: ObservableObject {
         request.addValue("en-US,en;q=0.9", forHTTPHeaderField: "Accept-Language")
         request.addValue("PHPSESSID=m7foji1ffc5h9lat02k4kgf13a", forHTTPHeaderField: "Cookie")
         request.addValue(cca, forHTTPHeaderField: "X-Requested-With")
-
+        
         request.httpMethod = "POST"
         request.httpBody = postData
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if error != nil {
-                self.log = String(describing: error)
+            DispatchQueue.main.async{
+                if error != nil {
+                    self.log = String(describing: error)
+                }
+                
+                if let data = data {
+                    self.log =  String(data: data, encoding: .utf8) ?? ""
+                    
+                }
+                self.isProcessing = false
             }
-            
-            if let data = data {
-                self.log =  String(data: data, encoding: .utf8) ?? ""
-
-            }
-            self.isProcessing = false
         }
-
+        
+        task.resume()
+    }
+    
+    func iConnect(){
+        self.log = ""
+        self.isProcessing = true
+        
+        var request = URLRequest(url: URL(string: plistConfig.object(forKey: "jt") as! String)!,timeoutInterval: Double.infinity)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async{
+                if error != nil {
+                    self.log = String(describing: error)
+                }
+                
+                if let data = data {
+                    self.log =  String(data: data, encoding: .utf8) ?? ""
+                    
+                    // decoding response
+                    if let decodedResponse = try? JSONDecoder().decode([iConnectResponse].self, from: data)  {
+                        self.port = decodedResponse[0].url
+                        self.date = decodedResponse[0].createdAt
+                    }
+                    
+                }
+                self.isProcessing = false
+            }
+        }
+        
         task.resume()
     }
 }

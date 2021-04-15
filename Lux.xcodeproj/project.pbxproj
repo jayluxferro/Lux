@@ -13,6 +13,8 @@
 		690B437B25A9DD2200110EB1 /* Ecg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695350D2252CEA9A002776D1 /* Ecg.framework */; };
 		69126C6D251FB60C00D724F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69126C6C251FB60B00D724F7 /* Assets.xcassets */; };
 		6926619C251FCBBE00C0E9B1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926619B251FCBBE00C0E9B1 /* Config.swift */; };
+		693BC87D2627B6F0005D81D5 /* iConnectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BC87C2627B6EF005D81D5 /* iConnectResponse.swift */; };
+		695CDF4C26263EE200ADA0DD /* JTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695CDF4B26263EE200ADA0DD /* JTView.swift */; };
 		697CD92125D0043E0031A59E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CD92025D0043E0031A59E /* Utils.swift */; };
 		697CD92325D0071B0031A59E /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 697CD92225D0071B0031A59E /* Config.plist */; };
 		69968632251524E500B4011E /* LuxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996861F251524E300B4011E /* LuxApp.swift */; };
@@ -25,7 +27,9 @@
 		690B437225A9D9E000110EB1 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		69126C6C251FB60B00D724F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6926619B251FCBBE00C0E9B1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		693BC87C2627B6EF005D81D5 /* iConnectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iConnectResponse.swift; sourceTree = "<group>"; };
 		695350D2252CEA9A002776D1 /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ecg.framework; path = ../../../opensource/ecg/Ecg.framework; sourceTree = "<group>"; };
+		695CDF4B26263EE200ADA0DD /* JTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTView.swift; sourceTree = "<group>"; };
 		697CD92025D0043E0031A59E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		697CD92225D0071B0031A59E /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		6996861F251524E300B4011E /* LuxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxApp.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				6926619B251FCBBE00C0E9B1 /* Config.swift */,
+				693BC87C2627B6EF005D81D5 /* iConnectResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -73,6 +78,7 @@
 				6996861F251524E300B4011E /* LuxApp.swift */,
 				690B435A25A9BD9400110EB1 /* MomoView.swift */,
 				690B435D25A9BDAF00110EB1 /* EnerSmartView.swift */,
+				695CDF4B26263EE200ADA0DD /* JTView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695CDF4C26263EE200ADA0DD /* JTView.swift in Sources */,
 				690B437325A9D9E000110EB1 /* Controller.swift in Sources */,
 				69B05C6F25A9EB92006C1769 /* LProgress.swift in Sources */,
 				690B435B25A9BD9400110EB1 /* MomoView.swift in Sources */,
 				697CD92125D0043E0031A59E /* Utils.swift in Sources */,
+				693BC87D2627B6F0005D81D5 /* iConnectResponse.swift in Sources */,
 				690B435E25A9BDAF00110EB1 /* EnerSmartView.swift in Sources */,
 				69968632251524E500B4011E /* LuxApp.swift in Sources */,
 				6926619C251FCBBE00C0E9B1 /* Config.swift in Sources */,
@@ -313,7 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462Z845U24;
+				DEVELOPMENT_TEAM = MR77TZQA37;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,7 +334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = apple.sperixlabs.lux;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sperixlabs.lux;
 				PRODUCT_NAME = Lux;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -340,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462Z845U24;
+				DEVELOPMENT_TEAM = MR77TZQA37;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = apple.sperixlabs.lux;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sperixlabs.lux;
 				PRODUCT_NAME = Lux;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
