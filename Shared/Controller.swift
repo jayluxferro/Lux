@@ -73,6 +73,8 @@ class Controller: ObservableObject {
     
     func iConnect(){
         self.log = ""
+        self.port = ""
+        self.date = ""
         self.isProcessing = true
         
         var request = URLRequest(url: URL(string: plistConfig.object(forKey: "jt") as! String)!,timeoutInterval: Double.infinity)
