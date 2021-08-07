@@ -16,6 +16,7 @@ class Controller: ObservableObject {
     @Published var isProcessing = false
     @Published var port = ""
     @Published var date = ""
+    @Published var node = ""
     let plistConfig = Utils.parseConfig()
     
     func endEditing() {
@@ -76,8 +77,8 @@ class Controller: ObservableObject {
         self.port = ""
         self.date = ""
         self.isProcessing = true
-        
-        var request = URLRequest(url: URL(string: plistConfig.object(forKey: "jt") as! String)!,timeoutInterval: Double.infinity)
+        self.node = self.node.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        var request = URLRequest(url: URL(string: "\(plistConfig.object(forKey: "jt") as! String)/\(self.node)")!,timeoutInterval: Double.infinity)
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -91,8 +92,9 @@ class Controller: ObservableObject {
                     
                     // decoding response
                     if let decodedResponse = try? JSONDecoder().decode([iConnectResponse].self, from: data)  {
-                        self.port = decodedResponse[0].url
+                        self.port = String(decodedResponse[0].port)
                         self.date = decodedResponse[0].createdAt
+                        self.node = decodedResponse[0].host
                     }
                     
                 }

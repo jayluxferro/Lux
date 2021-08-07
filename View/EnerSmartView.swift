@@ -82,9 +82,11 @@ struct EnerSmartView: View {
                                 TextEditor(text: $log)
                                     .disabled(true)
                                     .font(.subheadline)
-                                    .frame(height: geo.size.height/3, alignment: .leading)
+                                    .frame(minHeight: geo.size.height/3)
+                                    
                             }
                         }
+                        .frame(height: geo.size.height/3, alignment: .leading)
                     }
                     
                 }

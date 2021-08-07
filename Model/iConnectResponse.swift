@@ -9,7 +9,8 @@ import Foundation
 
 struct iConnectResponse: Decodable {
     let url: String
-    let port: Double
+    let host: String
+    let port: Int
     let createdAt: String
     let updatedAt: String
     let id: String

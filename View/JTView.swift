@@ -9,8 +9,6 @@ import SwiftUI
 
 struct JTView: View {
     @StateObject var ctrl = Controller()
-    @State private var port = ""
-    @State private var date = ""
     
     var body: some View {
         NavigationView {
@@ -18,6 +16,15 @@ struct JTView: View {
                 geo in
                 Form{
                     Section(header: Text("Details")) {
+                        HStack {
+                            Text("Node")
+                            Spacer(minLength: 14)
+                            Divider()
+                            Spacer()
+                            TextField("Node", text: $ctrl.node)
+                                .disabled(false)
+                        }
+                        
                         HStack {
                             Text("Port")
                             Spacer(minLength: 22)
@@ -45,9 +52,11 @@ struct JTView: View {
                                 TextEditor(text: $ctrl.log)
                                     .disabled(true)
                                     .font(.subheadline)
-                                    .frame(height: geo.size.height/2, alignment: .leading)
+                                    .frame( minHeight: geo.size.height/2)
+                                    
                             }
                         }
+                        .frame(height: geo.size.height/2, alignment: .leading)
                     }
                     
                 }
@@ -65,9 +74,9 @@ struct JTView: View {
                 DispatchQueue.main.async{
                     ctrl.iConnect()
                 }
-            }, label: {
+            }){
                 Image(systemName: "magnifyingglass.circle")
-            })
+            }
             .disabled(ctrl.isProcessing)
             )
         }
