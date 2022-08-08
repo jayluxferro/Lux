@@ -34,7 +34,7 @@ class Controller: ObservableObject {
         let validateG = plistConfig.object(forKey: "validateG") as! String
         let csapi = plistConfig.object(forKey: "csapi") as! String
         let cs = plistConfig.object(forKey: "cs") as! String
-        let cca = plistConfig.object(forKey: "cca") as! String
+        //let cca = plistConfig.object(forKey: "cca") as! String
         
         let parameters = "{\"userid\":\"\(userId)\",\"phantom\":\"\(phantom)\",\"destinationbank\":\"\(network)\",\"accountnumber\":\"\(phoneNumber)\",\"type\":\"MOMO\",\"requestType\":\"\(validateG)\"}"
         let postData = parameters.data(using: .utf8)
@@ -50,7 +50,7 @@ class Controller: ObservableObject {
         request.addValue("gzip, deflate", forHTTPHeaderField: "Accept-Encoding")
         request.addValue("en-US,en;q=0.9", forHTTPHeaderField: "Accept-Language")
         request.addValue("PHPSESSID=m7foji1ffc5h9lat02k4kgf13a", forHTTPHeaderField: "Cookie")
-        request.addValue(cca, forHTTPHeaderField: "X-Requested-With")
+        //request.addValue(cca, forHTTPHeaderField: "X-Requested-With")
         
         request.httpMethod = "POST"
         request.httpBody = postData

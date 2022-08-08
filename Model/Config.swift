@@ -15,4 +15,6 @@ struct Config {
     static let amount = "1"
     static let log = ""
     static let isProcessing = false
+    static let enersmartURL = "https://enersmart.sperixlabs.org"
+    static let pageLoaded = false
 }

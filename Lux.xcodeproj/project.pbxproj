@@ -3,22 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		690B435B25A9BD9400110EB1 /* MomoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B435A25A9BD9400110EB1 /* MomoView.swift */; };
 		690B435E25A9BDAF00110EB1 /* EnerSmartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B435D25A9BDAF00110EB1 /* EnerSmartView.swift */; };
 		690B437325A9D9E000110EB1 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B437225A9D9E000110EB1 /* Controller.swift */; };
-		690B437B25A9DD2200110EB1 /* Ecg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695350D2252CEA9A002776D1 /* Ecg.framework */; };
 		69126C6D251FB60C00D724F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69126C6C251FB60B00D724F7 /* Assets.xcassets */; };
 		6926619C251FCBBE00C0E9B1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926619B251FCBBE00C0E9B1 /* Config.swift */; };
 		693BC87D2627B6F0005D81D5 /* iConnectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BC87C2627B6EF005D81D5 /* iConnectResponse.swift */; };
 		695CDF4C26263EE200ADA0DD /* JTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695CDF4B26263EE200ADA0DD /* JTView.swift */; };
 		697CD92125D0043E0031A59E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CD92025D0043E0031A59E /* Utils.swift */; };
-		697CD92325D0071B0031A59E /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 697CD92225D0071B0031A59E /* Config.plist */; };
 		69968632251524E500B4011E /* LuxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996861F251524E300B4011E /* LuxApp.swift */; };
 		69B05C6F25A9EB92006C1769 /* LProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B05C6E25A9EB92006C1769 /* LProgress.swift */; };
+		69C3DA0B28A05F57007CC80B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69C3DA0A28A05F57007CC80B /* Config.plist */; };
+		69C3DA1228A07EB7007CC80B /* WebView in Frameworks */ = {isa = PBXBuildFile; productRef = 69C3DA1128A07EB7007CC80B /* WebView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,15 +28,14 @@
 		69126C6C251FB60B00D724F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6926619B251FCBBE00C0E9B1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		693BC87C2627B6EF005D81D5 /* iConnectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iConnectResponse.swift; sourceTree = "<group>"; };
-		695350D2252CEA9A002776D1 /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ecg.framework; path = ../../../opensource/ecg/Ecg.framework; sourceTree = "<group>"; };
 		695CDF4B26263EE200ADA0DD /* JTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTView.swift; sourceTree = "<group>"; };
 		697CD92025D0043E0031A59E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		697CD92225D0071B0031A59E /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		6996861F251524E300B4011E /* LuxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxApp.swift; sourceTree = "<group>"; };
 		69968626251524E500B4011E /* Lux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69968629251524E500B4011E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69B05C6A25A9E262006C1769 /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Ecg.framework; sourceTree = "<group>"; };
 		69B05C6E25A9EB92006C1769 /* LProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LProgress.swift; sourceTree = "<group>"; };
+		69C3DA0A28A05F57007CC80B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		69C3DA0C28A0760E007CC80B /* Ecg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ecg.framework; path = "Ecg.xcframework/ios-arm64_x86_64-simulator/Ecg.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690B437B25A9DD2200110EB1 /* Ecg.framework in Frameworks */,
+				69C3DA1228A07EB7007CC80B /* WebView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +62,6 @@
 		69968619251524E300B4011E = {
 			isa = PBXGroup;
 			children = (
-				69B05C6825A9E254006C1769 /* framework */,
 				6926619A251FCB8F00C0E9B1 /* Model */,
 				6996861E251524E300B4011E /* View */,
 				69968628251524E500B4011E /* Shared */,
@@ -99,23 +97,15 @@
 				690B437225A9D9E000110EB1 /* Controller.swift */,
 				69B05C6E25A9EB92006C1769 /* LProgress.swift */,
 				697CD92025D0043E0031A59E /* Utils.swift */,
-				697CD92225D0071B0031A59E /* Config.plist */,
+				69C3DA0A28A05F57007CC80B /* Config.plist */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		69B05C6825A9E254006C1769 /* framework */ = {
-			isa = PBXGroup;
-			children = (
-				69B05C6A25A9E262006C1769 /* Ecg.framework */,
-			);
-			path = framework;
 			sourceTree = "<group>";
 		};
 		E11FCFE03AF37F73ADBCB837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				695350D2252CEA9A002776D1 /* Ecg.framework */,
+				69C3DA0C28A0760E007CC80B /* Ecg.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +126,9 @@
 			dependencies = (
 			);
 			name = "Lux (iOS)";
+			packageProductDependencies = (
+				69C3DA1128A07EB7007CC80B /* WebView */,
+			);
 			productName = "EnerSmart (iOS)";
 			productReference = 69968626251524E500B4011E /* Lux.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 69968619251524E300B4011E;
+			packageReferences = (
+				69C3DA1028A07EB7007CC80B /* XCRemoteSwiftPackageReference "SwiftUI-WebView" */,
+			);
 			productRefGroup = 69968627251524E500B4011E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,7 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697CD92325D0071B0031A59E /* Config.plist in Resources */,
+				69C3DA0B28A05F57007CC80B /* Config.plist in Resources */,
 				69126C6D251FB60C00D724F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +323,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ecg.xcframework/ios-arm64_x86_64-simulator",
 				);
 				INFOPLIST_FILE = Shared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -354,6 +351,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ecg.xcframework/ios-arm64_x86_64-simulator",
 				);
 				INFOPLIST_FILE = Shared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -392,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		69C3DA1028A07EB7007CC80B /* XCRemoteSwiftPackageReference "SwiftUI-WebView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kylehickinson/SwiftUI-WebView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		69C3DA1128A07EB7007CC80B /* WebView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69C3DA1028A07EB7007CC80B /* XCRemoteSwiftPackageReference "SwiftUI-WebView" */;
+			productName = WebView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6996861A251524E300B4011E /* Project object */;
 }
